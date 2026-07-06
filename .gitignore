@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Fine-tuning checkpoints produced by re-running the notebook
+chronos-2-finetuned/
+
+# Notebook execution outputs
+artifacts/
+.ipynb_checkpoints/
