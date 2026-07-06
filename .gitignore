@@ -15,3 +15,6 @@ chronos-2-finetuned/
 # Notebook execution outputs
 artifacts/
 .ipynb_checkpoints/
+
+# Downloaded datasets
+data/

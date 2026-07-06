@@ -11,6 +11,11 @@ The main artifact is [`Chronos2_Zero_to_Mastery.ipynb`](./Chronos2_Zero_to_Maste
 - Chronos-2’s **multivariate** input formats (arrays and dict-based covariates)
 - Optional **LoRA fine-tuning** (opt-in)
 
+Companion notebook:
+
+- [`Chronos2_Multivariate_Jena_Climate.ipynb`](./Chronos2_Multivariate_Jena_Climate.ipynb): Chronos-2 on a **genuinely multivariate**
+  real dataset (Jena Climate), including native multivariate targets plus known-future calendar covariates.
+
 This repo is designed to run on **CPU or GPU** (auto-selects CUDA if available). GPU is strongly
 recommended for speed.
 
@@ -45,6 +50,17 @@ CHRONOS2_TUTORIAL_FAST=1 uv run jupyter nbconvert \
   --to notebook --execute Chronos2_Zero_to_Mastery.ipynb \
   --output-dir artifacts \
   --output Chronos2_Zero_to_Mastery.executed.ipynb \
+  --ExecutePreprocessor.timeout=1800
+```
+
+Multivariate companion notebook:
+
+```bash
+mkdir -p artifacts
+CHRONOS2_TUTORIAL_FAST=1 uv run jupyter nbconvert \
+  --to notebook --execute Chronos2_Multivariate_Jena_Climate.ipynb \
+  --output-dir artifacts \
+  --output Chronos2_Multivariate_Jena_Climate.executed.ipynb \
   --ExecutePreprocessor.timeout=1800
 ```
 
